@@ -5,23 +5,29 @@
 
 :root {
   /* Lab & Lather color scheme: White, Charcoal, Electric Blue, Silver */
-  --background: oklch(0.99 0 0); /* White */
-  --foreground: oklch(0.25 0 0); /* Charcoal */
+  --background: oklch(0.99 0 0);
+  /* White */
+  --foreground: oklch(0.25 0 0);
+  /* Charcoal */
   --card: oklch(0.98 0 0);
   --card-foreground: oklch(0.25 0 0);
   --popover: oklch(0.99 0 0);
   --popover-foreground: oklch(0.25 0 0);
-  --primary: oklch(0.25 0 0); /* Charcoal */
+  --primary: oklch(0.25 0 0);
+  /* Charcoal */
   --primary-foreground: oklch(0.99 0 0);
-  --secondary: oklch(0.92 0 0); /* Light gray */
+  --secondary: oklch(0.92 0 0);
+  /* Light gray */
   --secondary-foreground: oklch(0.25 0 0);
   --muted: oklch(0.94 0 0);
   --muted-foreground: oklch(0.5 0 0);
-  --accent: oklch(0.55 0.18 240); /* Electric Blue */
+  --accent: oklch(0.55 0.18 240);
+  /* Electric Blue */
   --accent-foreground: oklch(0.99 0 0);
   --destructive: oklch(0.577 0.245 27.325);
   --destructive-foreground: oklch(0.99 0 0);
-  --border: oklch(0.88 0 0); /* Silver */
+  --border: oklch(0.88 0 0);
+  /* Silver */
   --input: oklch(0.92 0 0);
   --ring: oklch(0.55 0.18 240);
   --chart-1: oklch(0.55 0.18 240);
@@ -29,7 +35,8 @@
   --chart-3: oklch(0.45 0.15 260);
   --chart-4: oklch(0.75 0.08 220);
   --chart-5: oklch(0.35 0.12 250);
-  --radius: 0.25rem; /* Minimal radius for clean, precise aesthetic */
+  --radius: 0.25rem;
+  /* Minimal radius for clean, precise aesthetic */
   --sidebar: oklch(0.985 0 0);
   --sidebar-foreground: oklch(0.25 0 0);
   --sidebar-primary: oklch(0.25 0 0);
@@ -121,6 +128,7 @@
   * {
     @apply border-border outline-ring/50;
   }
+
   body {
     @apply bg-background text-foreground;
   }
@@ -133,24 +141,29 @@
 
 /* Enhanced animations for Lab & Lather aesthetic */
 @keyframes float {
+
   0%,
   100% {
     transform: translateY(0px) translateX(0px) scale(1);
   }
+
   33% {
     transform: translateY(-30px) translateX(20px) scale(1.05);
   }
+
   66% {
     transform: translateY(15px) translateX(-15px) scale(0.95);
   }
 }
 
 @keyframes pulse-glow {
+
   0%,
   100% {
     opacity: 0.3;
     transform: scale(1);
   }
+
   50% {
     opacity: 0.6;
     transform: scale(1.05);
@@ -161,6 +174,7 @@
   0% {
     background-position: -1000px 0;
   }
+
   100% {
     background-position: 1000px 0;
   }
@@ -172,6 +186,7 @@
     opacity: 0;
     transform: translateY(30px);
   }
+
   to {
     opacity: 1;
     transform: translateY(0);
@@ -184,9 +199,91 @@
     opacity: 0;
     transform: scale(0.9);
   }
+
   to {
     opacity: 1;
     transform: scale(1);
+  }
+}
+
+/* Premium gradient animation */
+@keyframes gradient-shift {
+
+  0%,
+  100% {
+    background-position: 0% 50%;
+  }
+
+  50% {
+    background-position: 100% 50%;
+  }
+}
+
+/* Sophisticated reveal from bottom */
+@keyframes reveal-up {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+    filter: blur(10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+    filter: blur(0);
+  }
+}
+
+/* Magnetic hover effect */
+@keyframes magnetic-pulse {
+
+  0%,
+  100% {
+    box-shadow: 0 0 0 0 rgba(var(--accent-rgb), 0.4);
+  }
+
+  50% {
+    box-shadow: 0 0 0 20px rgba(var(--accent-rgb), 0);
+  }
+}
+
+/* Sparkle effect */
+@keyframes sparkle {
+
+  0%,
+  100% {
+    opacity: 0;
+    transform: scale(0) rotate(0deg);
+  }
+
+  50% {
+    opacity: 1;
+    transform: scale(1) rotate(180deg);
+  }
+}
+
+/* Slide in from side */
+@keyframes slide-in-right {
+  from {
+    opacity: 0;
+    transform: translateX(50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slide-in-left {
+  from {
+    opacity: 0;
+    transform: translateX(-50px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }
 
@@ -216,6 +313,31 @@
 
 .animate-scale-in {
   animation: scale-in 0.4s ease-out forwards;
+}
+
+.animate-gradient-shift {
+  animation: gradient-shift 8s ease infinite;
+  background-size: 200% 200%;
+}
+
+.animate-reveal-up {
+  animation: reveal-up 0.8s ease-out forwards;
+}
+
+.animate-magnetic-pulse {
+  animation: magnetic-pulse 2s ease-in-out infinite;
+}
+
+.animate-sparkle {
+  animation: sparkle 1.5s ease-in-out infinite;
+}
+
+.animate-slide-in-right {
+  animation: slide-in-right 0.6s ease-out forwards;
+}
+
+.animate-slide-in-left {
+  animation: slide-in-left 0.6s ease-out forwards;
 }
 
 /* Smooth scroll behavior */
@@ -263,4 +385,86 @@ textarea {
 
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent);
+}
+
+/* Premium utility classes */
+.glass-morphism {
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.text-gradient {
+  background: linear-gradient(135deg, var(--accent) 0%, var(--primary) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.text-gradient-accent {
+  background: linear-gradient(135deg, oklch(0.55 0.18 240) 0%, oklch(0.65 0.22 220) 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+.hover-lift {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.hover-lift:hover {
+  transform: translateY(-4px) scale(1.02);
+  box-shadow: 0 20px 40px -12px rgba(0, 0, 0, 0.15);
+}
+
+.perspective-card {
+  transform-style: preserve-3d;
+  transition: transform 0.6s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.perspective-card:hover {
+  transform: rotateX(2deg) rotateY(-2deg) scale(1.02);
+}
+
+.shimmer-border {
+  position: relative;
+  overflow: hidden;
+}
+
+.shimmer-border::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+  animation: shimmer 3s infinite;
+}
+
+.neon-glow {
+  text-shadow: 0 0 10px var(--accent), 0 0 20px var(--accent), 0 0 30px var(--accent);
+}
+
+.magnetic-button {
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  position: relative;
+}
+
+.magnetic-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 30px rgba(var(--accent-rgb, 85, 115, 255), 0.5);
+}
+
+/* Scroll progress indicator */
+.scroll-progress {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 0%;
+  height: 3px;
+  background: linear-gradient(90deg, var(--accent), var(--primary));
+  z-index: 9999;
+  transition: width 0.1s ease-out;
 }

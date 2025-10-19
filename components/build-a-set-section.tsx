@@ -75,10 +75,12 @@ export function BuildASetSection() {
               <Package className="h-8 w-8 text-accent" />
             </div>
             <h2 className="mb-4 text-balance text-3xl font-display font-bold tracking-tight md:text-4xl lg:text-5xl">
-              Build your perfect set
+              Prototype your <span className="text-gradient-accent">signature set</span> in minutes
             </h2>
             <p className="text-pretty text-lg text-muted-foreground leading-relaxed max-w-2xl mx-auto">
-              Select your favorite scent families and we'll curate a personalized collection just for you.
+              Select the moods that mirror your project and our formulators build a tactile storyline for you—complete with
+              sample-ready bars, candles, and merchandising notes.
+              <span className="text-accent font-semibold"> Save 15% on custom sets</span> while slots remain.
             </p>
           </div>
 
@@ -87,18 +89,17 @@ export function BuildASetSection() {
               <form onSubmit={handleSubmit} className="space-y-8">
                 <div className="space-y-4">
                   <Label className="text-base font-display font-semibold">
-                    Choose your scent families (select 2-3)
+                    Choose your scent families (select 2-3 for a cohesive capsule)
                   </Label>
                   <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
                     {scentFamilies.map((scent) => (
                       <div
                         key={scent.id}
                         onClick={() => toggleScent(scent.id)}
-                        className={`relative rounded-sm border cursor-pointer transition-all overflow-hidden group ${
-                          selectedScents.includes(scent.id)
-                            ? "border-accent bg-accent/5 shadow-lg scale-105"
-                            : "border-border hover:border-accent/50 hover:bg-accent/5 hover:scale-102"
-                        }`}
+                        className={`relative rounded-sm border cursor-pointer transition-all overflow-hidden group ${selectedScents.includes(scent.id)
+                          ? "border-accent bg-accent/5 shadow-lg scale-105"
+                          : "border-border hover:border-accent/50 hover:bg-accent/5 hover:scale-102"
+                          }`}
                       >
                         <div className="relative aspect-[3/2] overflow-hidden">
                           <Image
@@ -174,7 +175,8 @@ export function BuildASetSection() {
 
                 {selectedScents.length > 0 && (
                   <p className="text-sm text-center text-muted-foreground">
-                    {selectedScents.length} scent {selectedScents.length === 1 ? "family" : "families"} selected
+                    {selectedScents.length} scent {selectedScents.length === 1 ? "family" : "families"} selected — we&apos;ll
+                    translate them into full-formula prototypes and a mood-aligned palette.
                   </p>
                 )}
               </form>

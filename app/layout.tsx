@@ -4,8 +4,15 @@ import { Space_Grotesk, Source_Sans_3 } from "next/font/google"
 import { Analytics } from "@vercel/analytics/next"
 import "./globals.css"
 
-const _spaceGrotesk = Space_Grotesk({ subsets: ["latin"] })
-const _sourceSans3 = Source_Sans_3({ subsets: ["latin"] })
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-display",
+})
+
+const sourceSans3 = Source_Sans_3({
+  subsets: ["latin"],
+  variable: "--font-sans",
+})
 
 export const metadata: Metadata = {
   title: "Lab & Lather - Modern Soaps & Candles",
@@ -20,8 +27,8 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={`font-sans antialiased`}>
+    <html lang="en" className={`${spaceGrotesk.variable} ${sourceSans3.variable}`}>
+      <body className="font-sans antialiased">
         {children}
         <Analytics />
       </body>

@@ -61,7 +61,7 @@ export function PricingSection() {
             Simple, transparent pricing
           </h2>
           <p className="text-pretty text-lg text-muted-foreground">
-            Choose the plan that's right for your team. All plans include a 14-day free trial.
+            Choose the plan that&apos;s right for your team. All plans include a 14-day free trial.
           </p>
         </div>
 
@@ -69,9 +69,8 @@ export function PricingSection() {
           {plans.map((plan, index) => (
             <Card
               key={index}
-              className={`relative border-border/50 ${
-                plan.popular ? "border-accent shadow-lg shadow-accent/10" : "bg-card"
-              }`}
+              className={`relative border-border/50 ${plan.popular ? "border-accent shadow-lg shadow-accent/10" : "bg-card"
+                }`}
             >
               {plan.popular && (
                 <div className="absolute -top-4 left-1/2 -translate-x-1/2">

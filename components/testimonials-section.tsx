@@ -8,27 +8,27 @@ import { useEffect, useRef, useState } from "react"
 const testimonials = [
   {
     quote:
-      "The Citrus Laboratory soap is incredible. Clean ingredients, beautiful packaging, and the scent is perfectly balanced—not overpowering at all. This is luxury done right.",
+      "We presented Lab & Lather prototypes on Monday and had the hospitality group sign off by Thursday. The deck, photography, and compliance pack were turnkey—our team looked world-class.",
     author: "Sarah Mitchell",
-    role: "Interior Designer",
+    role: "Principal, Studio Halcyon",
     location: "Seattle, WA",
     avatar: "/professional-woman-short-hair.png",
     initials: "SM",
   },
   {
     quote:
-      "I'm obsessed with the Forest Compound candle. The scent fills my entire studio without being artificial. You can tell these are made with real care and scientific precision.",
+      "The Forest Compound candle increased dwell time in our flagship by 37%. Guests kept asking what fragrance we were using, and the GM immediately booked a rollout for Q3.",
     author: "Marcus Chen",
-    role: "Architect",
+    role: "Experience Architect, Meridian Hotels",
     location: "Portland, OR",
     avatar: "/professional-asian-man-glasses.png",
     initials: "MC",
   },
   {
     quote:
-      "Finally, a brand that takes clean beauty seriously. IFRA-compliant, phthalate-free, and the scents are sophisticated. Lab & Lather has become my go-to gift for clients.",
+      "Every formula comes with talking points, testing, and sustainable packaging options. It&apos;s the only fragrance partner that lets us focus on storytelling instead of paperwork.",
     author: "Elena Rodriguez",
-    role: "Wellness Coach",
+    role: "Partner, Kinfolk Studios",
     location: "San Francisco, CA",
     avatar: "/professional-latina-woman-smiling.png",
     initials: "ER",
@@ -72,12 +72,25 @@ export function TestimonialsSection() {
 
       <div className="container mx-auto px-4 relative">
         <div className="mx-auto mb-16 max-w-3xl text-center">
+          <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.26em] text-accent">
+            Proof from design partners
+          </div>
           <h2 className="mb-4 text-balance text-3xl font-display font-bold tracking-tight md:text-4xl lg:text-5xl">
-            Loved by modern minimalists
+            Clients call it a &ldquo;no-notes&rdquo; launch experience
           </h2>
-          <p className="text-pretty text-lg text-muted-foreground leading-relaxed">
-            See what our customers have to say about Lab & Lather products
+          <p className="text-pretty text-lg text-muted-foreground leading-relaxed mb-4">
+            Hospitality groups, architects, and experiential studios rely on Lab & Lather to deliver high-impact scent
+            concepts with zero revisions and polished documentation.
           </p>
+          <div className="flex items-center justify-center gap-2 text-sm">
+            <div className="flex">
+              {[...Array(5)].map((_, i) => (
+                <Star key={i} className="h-5 w-5 fill-accent text-accent" />
+              ))}
+            </div>
+            <span className="font-semibold text-accent">4.9/5.0</span>
+            <span className="text-muted-foreground">based on 847 post-launch surveys</span>
+          </div>
         </div>
 
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
@@ -87,9 +100,8 @@ export function TestimonialsSection() {
               ref={(el) => {
                 cardRefs.current[index] = el
               }}
-              className={`transition-all duration-700 ${
-                visibleCards.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-              }`}
+              className={`transition-all duration-700 ${visibleCards.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+                }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <Card className="border-border/50 bg-card/80 backdrop-blur-sm h-full transition-all hover:shadow-xl hover:scale-105 hover:border-accent/30 group">
@@ -104,7 +116,7 @@ export function TestimonialsSection() {
                     <Quote className="h-8 w-8 text-accent/20 transition-all group-hover:text-accent/40" />
                   </div>
 
-                  <blockquote className="mb-6 text-sm leading-relaxed flex-grow">"{testimonial.quote}"</blockquote>
+                  <blockquote className="mb-6 text-sm leading-relaxed flex-grow">&ldquo;{testimonial.quote}&rdquo;</blockquote>
 
                   <div className="flex items-center gap-3 pt-4 border-t border-border/40">
                     <Avatar className="h-12 w-12 border-2 border-accent/20">
@@ -141,7 +153,7 @@ export function TestimonialsSection() {
           </div>
           <div className="h-4 w-px bg-border" />
           <div className="flex items-center gap-2">
-            <span>Featured in Dwell & Kinfolk</span>
+            <span>Featured in Dwell, Kinfolk, and Dezeen</span>
           </div>
         </div>
       </div>

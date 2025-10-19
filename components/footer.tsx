@@ -35,140 +35,136 @@ export function Footer() {
               </div>
             </div>
 
-            <div className="flex gap-3">
-              <Link
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-sm border border-border/50 bg-background/50 text-muted-foreground transition-all hover:border-accent/50 hover:bg-accent/10 hover:text-accent hover:scale-110"
-              >
-                <Instagram className="h-4 w-4" />
-                <span className="sr-only">Instagram</span>
-              </Link>
-              <Link
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-sm border border-border/50 bg-background/50 text-muted-foreground transition-all hover:border-accent/50 hover:bg-accent/10 hover:text-accent hover:scale-110"
-              >
-                <Twitter className="h-4 w-4" />
-                <span className="sr-only">Twitter</span>
-              </Link>
-              <Link
-                href="#"
-                className="flex h-9 w-9 items-center justify-center rounded-sm border border-border/50 bg-background/50 text-muted-foreground transition-all hover:border-accent/50 hover:bg-accent/10 hover:text-accent hover:scale-110"
-              >
-                <Facebook className="h-4 w-4" />
-                <span className="sr-only">Facebook</span>
-              </Link>
+          <div className="flex gap-3">
+            <Link
+              href="https://instagram.com/labandlather"
+              target="_blank"
+              rel="noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-sm border border-border/50 bg-background/50 text-muted-foreground transition-all hover:border-accent/50 hover:bg-accent/10 hover:text-accent hover:scale-110"
+            >
+              <Instagram className="h-4 w-4" />
+              <span className="sr-only">Instagram</span>
+            </Link>
+            <Link
+              href="https://x.com/labandlather"
+              target="_blank"
+              rel="noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-sm border border-border/50 bg-background/50 text-muted-foreground transition-all hover:border-accent/50 hover:bg-accent/10 hover:text-accent hover:scale-110"
+            >
+              <Twitter className="h-4 w-4" />
+              <span className="sr-only">Twitter</span>
+            </Link>
+            <Link
+              href="https://facebook.com/labandlather"
+              target="_blank"
+              rel="noreferrer"
+              className="flex h-9 w-9 items-center justify-center rounded-sm border border-border/50 bg-background/50 text-muted-foreground transition-all hover:border-accent/50 hover:bg-accent/10 hover:text-accent hover:scale-110"
+            >
+              <Facebook className="h-4 w-4" />
+              <span className="sr-only">Facebook</span>
+            </Link>
             </div>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-display font-semibold">Shop</h3>
+            <h3 className="mb-4 text-sm font-display font-semibold">Studio</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="#case-studies"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  All Products
+                  Case Studies
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="#features"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  Soaps
+                  Services & Process
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="#lookbook"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  Candles
+                  Lookbook Preview
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="#science"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  Gift Sets
+                  Compliance Lab
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-display font-semibold">Company</h3>
+            <h3 className="mb-4 text-sm font-display font-semibold">Resources</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="#testimonials"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  About Us
+                  Client Reviews
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="#build-a-set"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  Our Science
+                  Prototype Portal
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="#subscribe"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  Sustainability
+                  Waitlist Access
                 </Link>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="mailto:hello@labandlather.com"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  Contact
+                  Press & Media Kit
                 </Link>
               </li>
             </ul>
           </div>
 
           <div>
-            <h3 className="mb-4 text-sm font-display font-semibold">Support</h3>
+            <h3 className="mb-4 text-sm font-display font-semibold">Contact</h3>
             <ul className="space-y-3 text-sm">
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="mailto:projects@labandlather.com"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  FAQ
+                  projects@labandlather.com
                 </Link>
               </li>
               <li>
-                <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
-                >
-                  Shipping
-                </Link>
+                <span className="block text-muted-foreground">Mon–Fri • 9am–6pm PT</span>
+              </li>
+              <li>
+                <span className="block text-muted-foreground">Private studio tours by appointment</span>
               </li>
               <li>
                 <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
+                  href="#subscribe"
+                  className="inline-block text-muted-foreground transition-all hover:translate-x-1 hover:text-foreground"
                 >
-                  Returns
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="#"
-                  className="text-muted-foreground transition-all hover:text-foreground hover:translate-x-1 inline-block"
-                >
-                  Ingredients
+                  Request Formulator Kit
                 </Link>
               </li>
             </ul>
@@ -179,13 +175,13 @@ export function Footer() {
           <div className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground md:flex-row">
             <p>© {new Date().getFullYear()} Lab & Lather. All rights reserved.</p>
             <div className="flex gap-6">
-              <Link href="#" className="transition-colors hover:text-foreground">
+              <Link href="/privacy" className="transition-colors hover:text-foreground">
                 Privacy Policy
               </Link>
-              <Link href="#" className="transition-colors hover:text-foreground">
+              <Link href="/terms" className="transition-colors hover:text-foreground">
                 Terms of Service
               </Link>
-              <Link href="#" className="transition-colors hover:text-foreground">
+              <Link href="/accessibility" className="transition-colors hover:text-foreground">
                 Accessibility
               </Link>
             </div>
