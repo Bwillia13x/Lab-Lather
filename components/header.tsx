@@ -3,7 +3,7 @@
 import Link from "next/link"
 import Image from "next/image"
 import { Button } from "@/components/ui/button"
-import { Menu, Palette, ArrowUpRight } from "lucide-react"
+import { Menu, Flame, ShoppingBag } from "lucide-react"
 import { useState, useEffect } from "react"
 
 export function Header() {
@@ -39,64 +39,63 @@ export function Header() {
 
         <nav className="hidden items-center gap-8 md:flex">
           <Link
-            href="#case-studies"
+            href="#products"
             className="text-sm font-medium text-muted-foreground transition-all hover:text-foreground hover:scale-105 relative group"
           >
-            Results
+            Candles
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
           </Link>
           <Link
             href="#lookbook"
             className="text-sm font-medium text-muted-foreground transition-all hover:text-foreground hover:scale-105 relative group"
           >
-            Lookbook
+            Gallery
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
           </Link>
           <Link
             href="#build-a-set"
             className="text-sm font-medium text-muted-foreground transition-all hover:text-foreground hover:scale-105 relative group"
           >
-            Build-a-Set
+            Collections
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
           </Link>
           <Link
             href="#science"
             className="text-sm font-medium text-muted-foreground transition-all hover:text-foreground hover:scale-105 relative group"
           >
-            Science
+            Our Craft
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
           </Link>
           <Link
             href="#testimonials"
             className="text-sm font-medium text-muted-foreground transition-all hover:text-foreground hover:scale-105 relative group"
           >
-            Clients
-            <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
-          </Link>
-          <Link
-            href="#subscribe"
-            className="text-sm font-medium text-muted-foreground transition-all hover:text-foreground hover:scale-105 relative group"
-          >
-            Subscribe
+            Reviews
             <span className="absolute -bottom-1 left-0 w-0 h-0.5 bg-accent transition-all group-hover:w-full" />
           </Link>
         </nav>
 
         <div className="flex items-center gap-3">
           <Button
+            asChild
             variant="ghost"
             size="sm"
             className="hidden md:inline-flex items-center gap-1 text-muted-foreground transition-all hover:scale-105 hover:text-foreground"
           >
-            <Palette className="h-4 w-4" />
-            Lookbook
+            <Link href="#lookbook">
+              <Flame className="h-4 w-4" />
+              Explore Scents
+            </Link>
           </Button>
           <Button
+            asChild
             size="sm"
             className="hidden md:inline-flex items-center gap-1 bg-gradient-to-r from-accent to-accent/80 shadow-lg shadow-accent/30 transition-all hover:from-accent/90 hover:to-accent/70"
           >
-            <ArrowUpRight className="h-4 w-4" />
-            Request Kit
+            <Link href="#subscribe">
+              <ShoppingBag className="h-4 w-4" />
+              Shop Now
+            </Link>
           </Button>
           <Button variant="ghost" size="sm" className="md:hidden">
             <Menu className="h-5 w-5" />

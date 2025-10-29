@@ -1,32 +1,32 @@
 "use client"
 
-import { Users, Package, Award, Building2, Sparkles } from "lucide-react"
+import { Users, Flame, Award, Heart, Sparkles } from "lucide-react"
 import { useEffect, useState } from "react"
 
-const partners = ["The Line Hotel", "Kinfolk Studio", "Atelier 92", "Everlane Flagship", "Lumen Spas", "Haus Series"]
+const partners = ["Vogue Living", "Architectural Digest", "Elle Decor", "Kinfolk", "Dwell Magazine", "Domino"]
 
 const metrics = [
   {
     icon: Users,
-    value: "3,200+",
-    label: "design leads in active pipeline",
+    value: "5,000+",
+    label: "satisfied customers nationwide",
   },
   {
-    icon: Package,
-    value: "68",
-    label: "custom scent architectures delivered",
+    icon: Flame,
+    value: "12",
+    label: "signature luxury scents",
   },
   {
     icon: Award,
-    value: "100%",
-    label: "IFRA + CPSR compliant batches",
+    value: "4.9/5",
+    label: "average customer rating",
   },
 ]
 
 export function SocialProof() {
   const [mounted, setMounted] = useState(false)
   const [count, setCount] = useState(0)
-  const targetCount = 3200
+  const targetCount = 5000
 
   useEffect(() => {
     setMounted(true)
@@ -56,12 +56,12 @@ export function SocialProof() {
       <div className="container mx-auto px-4">
         <div className="mb-10 flex flex-col items-center gap-4 text-center">
           <div className="inline-flex items-center gap-2 rounded-full border border-accent/25 bg-accent/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.26em] text-accent">
-            <Building2 className="h-3.5 w-3.5" />
-            Trusted by design-led hospitality & retail
+            <Heart className="h-3.5 w-3.5" />
+            Trusted by candle lovers everywhere
           </div>
           <p className="max-w-3xl text-pretty text-base text-muted-foreground">
-            Studio partners leverage Lab & Lather to present launch-ready scent concepts that pair visual direction with
-            compliance documentation on day one.
+            Join thousands of customers who have transformed their homes with our luxury scented candles. Featured in
+            leading lifestyle publications and loved by design enthusiasts.
           </p>
         </div>
 

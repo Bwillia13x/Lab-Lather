@@ -1,6 +1,6 @@
 "use client"
 
-import { Beaker, Shield, Sparkles, Leaf, Compass, ClipboardCheck } from "lucide-react"
+import { Flame, Shield, Sparkles, Leaf, Clock, Award } from "lucide-react"
 import { Card, CardContent } from "@/components/ui/card"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
@@ -9,45 +9,47 @@ import { Button } from "@/components/ui/button"
 
 const features = [
   {
-    icon: Beaker,
-    title: "Compliance engineered",
+    icon: Flame,
+    title: "Perfume-Grade Fragrances",
     description:
-      "IFRA, CPSR, and Prop 65 documentation bundled with every concept so clients sign off without friction.",
-    image: "/laboratory-beakers-and-test-tubes-with-clear-liqui.jpg",
-  },
-  {
-    icon: Shield,
-    title: "Clean-room grade",
-    description:
-      "Phthalate, sulfate, and cruelty-free batches produced in small runs with traceable ingredients and batch IDs.",
-    image: "/natural-organic-ingredients-in-glass-containers--c.jpg",
-  },
-  {
-    icon: Sparkles,
-    title: "Design-first storytelling",
-    description:
-      "Texture, lighting, and packaging ready for decks, line sheets, and immersive mock-ups within 48 hours.",
+      "Complex scent profiles with top, heart, and base notes that evolve beautifully as your candle burns, creating an immersive sensory experience.",
     image: "/elegant-essential-oil-bottles-arranged-geometrical.jpg",
   },
   {
-    icon: Leaf,
-    title: "Circular materials",
+    icon: Shield,
+    title: "Clean & Safe Ingredients",
     description:
-      "Refillable vessels, recycled glass, and FSC-certified wraps ensure sustainability is part of the pitch.",
+      "IFRA-certified formulations that are phthalate-free, paraben-free, and cruelty-free. Premium soy-coconut wax blend for a clean, even burn.",
+    image: "/natural-organic-ingredients-in-glass-containers--c.jpg",
+  },
+  {
+    icon: Clock,
+    title: "Extended Burn Time",
+    description:
+      "Each luxury candle provides 60+ hours of exceptional fragrance throw, filling your entire space with sophisticated scent from first light to last.",
+    image: "/laboratory-beakers-and-test-tubes-with-clear-liqui.jpg",
+  },
+  {
+    icon: Leaf,
+    title: "Sustainable Luxury",
+    description:
+      "Refillable vessels, recycled glass containers, and FSC-certified packaging ensure your indulgence is as kind to the planet as it is to your senses.",
     image: "/sustainable-eco-friendly-packaging-with-natural-el.jpg",
   },
 ]
 
 const process = [
   {
-    icon: Compass,
-    title: "Discovery Sprint",
-    description: "Collaborative mood-boarding translates brand values into olfactive direction within one workshop.",
+    icon: Sparkles,
+    title: "Curated Scent Selection",
+    description:
+      "Choose from our signature collection or let our experts curate the perfect fragrance journey for your home.",
   },
   {
-    icon: ClipboardCheck,
-    title: "Pilot Launch",
-    description: "We deliver sensory prototypes, test scripts, and analytics templates so approvals arrive in days, not weeks.",
+    icon: Award,
+    title: "Hand-Poured Excellence",
+    description:
+      "Each candle is meticulously hand-poured in small batches to ensure consistent quality and exceptional scent throw.",
   },
 ]
 
@@ -84,14 +86,15 @@ export function FeaturesSection() {
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 max-w-4xl text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.26em] text-accent">
-            Full-stack formulation studio
+            Premium Candle Craftsmanship
           </div>
           <h2 className="mb-4 text-balance text-3xl font-display font-bold tracking-tight md:text-4xl lg:text-5xl">
-            The science is invisible. The desire is immediate.
+            Luxury That Burns Beautifully
           </h2>
           <p className="text-pretty text-lg text-muted-foreground leading-relaxed">
-            We build fragrance programs that stand up to regulatory scrutiny while dazzling the senses. Every deliverable
-            arrives with visuals, compliance, and operations pre-solved so your presentation feels inevitable.
+            Every Lab & Lather candle is a masterpiece of fragrance engineering. We combine the finest natural waxes
+            with perfume-grade essential oils and fragrance compounds to create scented candles that transform ordinary
+            moments into extraordinary experiences.
           </p>
         </div>
 
@@ -102,8 +105,9 @@ export function FeaturesSection() {
               ref={(el) => {
                 cardRefs.current[index] = el
               }}
-              className={`transition-all duration-700 ${visibleCards.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+              className={`transition-all duration-700 ${
+                visibleCards.includes(index) ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
               style={{ transitionDelay: `${index * 100}ms` }}
             >
               <Card className="border-border/50 bg-card/50 backdrop-blur-sm transition-all hover:border-accent/50 hover:shadow-xl hover:scale-105 h-full overflow-hidden group">
@@ -151,9 +155,12 @@ export function FeaturesSection() {
         </div>
 
         <div className="mt-12 flex justify-center">
-          <Link href="#case-studies" className="inline-flex">
-            <Button variant="outline" className="border-accent/40 text-foreground hover:border-accent/60 hover:bg-background/80">
-              View recent launch outcomes
+          <Link href="#subscribe" className="inline-flex">
+            <Button
+              size="lg"
+              className="bg-gradient-to-r from-accent to-accent/80 shadow-xl shadow-accent/30 transition-all hover:from-accent/90 hover:to-accent/70 hover:shadow-accent/50 hover:scale-105"
+            >
+              Start Your Candle Subscription Today
             </Button>
           </Link>
         </div>

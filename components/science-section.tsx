@@ -1,22 +1,22 @@
 "use client"
 
 import { Card, CardContent } from "@/components/ui/card"
-import { CheckCircle2, Microscope, Shield, FileCheck, Timer, TestTube2 } from "lucide-react"
+import { CheckCircle2, Flame, Leaf, Heart, Timer, Sparkles } from "lucide-react"
 import { useEffect, useRef, useState } from "react"
 import Image from "next/image"
 
 const credentials = [
-  { text: "IFRA-certified fragrance dossiers with revision history", icon: FileCheck },
-  { text: "Third-party purity assays + heavy metal screening", icon: Shield },
-  { text: "Ingredient sourcing mapped by cooperative & lot", icon: CheckCircle2 },
-  { text: "Batch tracking with QR-linked QC snapshots", icon: Microscope },
-  { text: "Dermatologist reviewed formulations for leave-on + rinse-off", icon: Shield },
-  { text: "Prop 65, CPSR, and CLP documentation packaged for export", icon: FileCheck },
+  { text: "Hand-poured with premium soy-coconut wax blend", icon: Heart },
+  { text: "IFRA-certified luxury fragrance oils", icon: CheckCircle2 },
+  { text: "Lead-free cotton wicks for clean burning", icon: Flame },
+  { text: "Phthalate-free and cruelty-free formulations", icon: Leaf },
+  { text: "60+ hour burn time for lasting luxury", icon: Timer },
+  { text: "Sustainable packaging and eco-conscious sourcing", icon: Leaf },
 ]
 
 const turnaround = [
-  { label: "Compliance pack delivery", value: "48 hrs", icon: Timer },
-  { label: "Stability testing partners", value: "4 labs", icon: TestTube2 },
+  { label: "Burn time per candle", value: "60+ hrs", icon: Timer },
+  { label: "Signature scents", value: "12+", icon: Sparkles },
 ]
 
 export function ScienceSection() {
@@ -53,22 +53,23 @@ export function ScienceSection() {
       <div className="container mx-auto px-4 relative">
         <div className="grid gap-12 lg:grid-cols-2 lg:gap-16 items-center">
           <div
-            className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
-              }`}
+            className={`transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+            }`}
           >
             <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-medium backdrop-blur-sm">
-              <Microscope className="h-3.5 w-3.5 text-accent" />
-              <span className="text-accent">Scientific Validation</span>
+              <Flame className="h-3.5 w-3.5 text-accent" />
+              <span className="text-accent">Artisan Craftsmanship</span>
             </div>
 
             <h2 className="mb-6 text-balance text-3xl font-display font-bold tracking-tight md:text-4xl lg:text-5xl">
-              Laboratory precision meets <span className="text-gradient-accent">modern design</span>
+              Luxury candles crafted with <span className="text-gradient-accent">scientific precision</span>
             </h2>
             <p className="text-lg text-muted-foreground leading-relaxed mb-8">
-              Every Lab & Lather product is treated like a cosmetic launch. Our internal lab coordinates third-party
-              verification while packaging the science into polished documentation that design teams can circulate without
-              translation.
-              <span className="text-accent font-semibold"> Compliance without killing momentum.</span>
+              Every Lab & Lather candle is hand-poured using premium ingredients and rigorously tested for quality. We
+              combine artisan techniques with modern fragrance science to create candles that burn cleanly and fill your
+              space with captivating scents.
+              <span className="text-accent font-semibold"> Luxury you can trust.</span>
             </p>
             <div className="space-y-3">
               {credentials.map((credential, index) => {
@@ -76,8 +77,9 @@ export function ScienceSection() {
                 return (
                   <div
                     key={index}
-                    className={`flex items-start gap-3 p-3 rounded-md transition-all duration-700 hover:bg-accent/5 group ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
-                      }`}
+                    className={`flex items-start gap-3 p-3 rounded-md transition-all duration-700 hover:bg-accent/5 group ${
+                      isVisible ? "opacity-100 translate-x-0" : "opacity-0 -translate-x-8"
+                    }`}
                     style={{ transitionDelay: `${index * 100 + 300}ms` }}
                   >
                     <div className="flex h-8 w-8 items-center justify-center rounded-sm bg-accent/10 border border-accent/20 flex-shrink-0 transition-all group-hover:bg-accent/20 group-hover:scale-110">
@@ -112,27 +114,28 @@ export function ScienceSection() {
           </div>
 
           <div
-            className={`transition-all duration-1000 ${isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
-              }`}
+            className={`transition-all duration-1000 ${
+              isVisible ? "opacity-100 translate-x-0" : "opacity-0 translate-x-8"
+            }`}
           >
             <Card className="border-border/50 bg-card/50 backdrop-blur-sm shadow-xl overflow-hidden group">
               <CardContent className="p-0">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <Image
                     src="/laboratory-beakers-and-test-tubes-with-clear-liqui.jpg"
-                    alt="Laboratory equipment and testing - IFRA certified formulations"
+                    alt="Premium candle craftsmanship - hand-poured luxury scented candles"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
                   />
 
                   <div className="absolute bottom-6 left-6 space-y-3">
                     <div className="bg-background/95 backdrop-blur-md border border-accent/40 rounded-sm px-5 py-3 shadow-xl">
-                      <p className="text-2xl font-display font-bold text-accent">IFRA</p>
-                      <p className="text-xs text-muted-foreground">Certified Formulations</p>
+                      <p className="text-2xl font-display font-bold text-accent">Premium</p>
+                      <p className="text-xs text-muted-foreground">Hand-Poured Quality</p>
                     </div>
                     <div className="rounded-md border border-accent/30 bg-background/90 px-4 py-3 text-xs uppercase tracking-[0.22em] text-muted-foreground">
-                      <span className="block text-foreground">COA + SDS included</span>
-                      <span>Region-ready: US • EU • CA</span>
+                      <span className="block text-foreground">Clean Burning</span>
+                      <span>60+ Hour Burn Time</span>
                     </div>
                   </div>
                 </div>

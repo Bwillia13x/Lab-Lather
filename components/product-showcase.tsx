@@ -2,33 +2,38 @@
 
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
+import { Button } from "@/components/ui/button"
+import { ArrowRight } from "lucide-react"
 import Image from "next/image"
 import { useEffect, useRef, useState } from "react"
 
 const products = [
   {
-    name: "Citrus Laboratory",
-    category: "Soap Bar",
-    scent: "Bergamot • Yuzu • White Tea",
-    image: "/elegant-essential-oil-bottles-arranged-geometrical.jpg",
-    statLabel: "Retail sell-through",
-    statValue: "82% in 6 weeks",
-  },
-  {
-    name: "Forest Compound",
-    category: "Candle",
-    scent: "Cedar • Moss • Rain",
+    name: "Midnight Ember",
+    category: "Luxury Candle",
+    scent: "Smoked Cedar • Leather • Dark Amber",
     image: "/natural-organic-ingredients-in-glass-containers--c.jpg",
-    statLabel: "Boutique reorder",
-    statValue: "3.2x standard",
+    statLabel: "Burn Time",
+    statValue: "65 hours",
+    notes: "Rich, sophisticated, and deeply grounding",
   },
   {
-    name: "Coastal Elements",
-    category: "Soap Bar",
-    scent: "Sea Salt • Driftwood • Sage",
+    name: "Citrus Grove",
+    category: "Luxury Candle",
+    scent: "Bergamot • Yuzu • White Tea • Jasmine",
+    image: "/elegant-essential-oil-bottles-arranged-geometrical.jpg",
+    statLabel: "Scent Throw",
+    statValue: "Exceptional",
+    notes: "Bright, uplifting, and refreshingly elegant",
+  },
+  {
+    name: "Coastal Sanctuary",
+    category: "Luxury Candle",
+    scent: "Sea Salt • Driftwood • Sage • Eucalyptus",
     image: "/sustainable-eco-friendly-packaging-with-natural-el.jpg",
-    statLabel: "Guest satisfaction",
+    statLabel: "Customer Rating",
     statValue: "4.9 / 5",
+    notes: "Clean, calming, and spa-like tranquility",
   },
 ]
 
@@ -60,11 +65,12 @@ export function ProductShowcase() {
       <div className="container mx-auto px-4">
         <div className="mb-12 text-center">
           <h2 className="mb-4 text-balance text-3xl font-display font-bold tracking-tight md:text-4xl lg:text-5xl">
-            Signature launches that converted on first sight
+            Our Signature Scented Candle Collection
           </h2>
           <p className="text-pretty text-lg text-muted-foreground leading-relaxed max-w-3xl mx-auto">
-            Each collection marries a memorable scent architecture with tactile storytelling—delivered with photography,
-            merchandising notes, and compliance packs so buyers, hoteliers, and investors say yes immediately.
+            Each luxury candle is hand-poured with premium soy-coconut wax and features complex, perfume-grade
+            fragrances that fill your space with sophisticated scent. Experience the difference of high-grade,
+            IFRA-certified candles crafted for the most discerning homes.
           </p>
         </div>
 
@@ -72,8 +78,9 @@ export function ProductShowcase() {
           {products.map((product, index) => (
             <Card
               key={index}
-              className={`border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden group transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/50 perspective-card ${isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
-                }`}
+              className={`border-border/50 bg-card/50 backdrop-blur-sm overflow-hidden group transition-all duration-700 hover:scale-105 hover:shadow-2xl hover:shadow-accent/20 hover:border-accent/50 perspective-card ${
+                isVisible ? "opacity-100 translate-y-0" : "opacity-0 translate-y-8"
+              }`}
               style={{ transitionDelay: `${index * 150}ms` }}
             >
               <CardContent className="p-0">
@@ -89,7 +96,10 @@ export function ProductShowcase() {
                   <div className="absolute inset-0 translate-x-[-120%] bg-gradient-to-r from-transparent via-white/20 to-transparent opacity-0 transition-all duration-700 group-hover:translate-x-[120%] group-hover:opacity-100" />
 
                   <div className="absolute top-4 right-4 flex flex-col items-end gap-3">
-                    <Badge variant="secondary" className="bg-background/90 backdrop-blur-sm border border-accent/20 group-hover:border-accent/40 transition-all uppercase tracking-[0.2em]">
+                    <Badge
+                      variant="secondary"
+                      className="bg-background/90 backdrop-blur-sm border border-accent/20 group-hover:border-accent/40 transition-all uppercase tracking-[0.2em]"
+                    >
                       {product.category}
                     </Badge>
                     <div className="rounded-md border border-accent/40 bg-background/90 px-3 py-2 text-right text-xs font-semibold uppercase tracking-[0.22em] text-muted-foreground">
@@ -100,18 +110,29 @@ export function ProductShowcase() {
                 </div>
 
                 <div className="p-6">
-                  <h3 className="mb-2 text-xl font-display font-semibold group-hover:text-accent transition-colors">{product.name}</h3>
-                  <p className="text-sm text-muted-foreground">{product.scent}</p>
-                  <p className="mt-3 text-xs uppercase tracking-[0.26em] text-muted-foreground">Pre-order kit includes: formula deck, retail planogram, compliance pack</p>
+                  <h3 className="mb-2 text-xl font-display font-semibold group-hover:text-accent transition-colors">
+                    {product.name}
+                  </h3>
+                  <p className="text-sm text-muted-foreground mb-2">{product.scent}</p>
+                  <p className="text-xs text-muted-foreground italic">{product.notes}</p>
                 </div>
               </CardContent>
             </Card>
           ))}
         </div>
 
-        <div className="mt-12 flex justify-center">
-          <Badge className="bg-accent text-accent-foreground px-6 py-2 text-xs uppercase tracking-[0.26em]">
-            Next release: Atelier Series / June 2025
+        <div className="mt-12 flex flex-col items-center gap-4">
+          <Button
+            size="lg"
+            className="group bg-gradient-to-r from-accent to-accent/80 shadow-xl shadow-accent/30 transition-all hover:from-accent/90 hover:to-accent/70 hover:shadow-accent/50 hover:scale-105"
+          >
+            <span className="flex items-center">
+              Shop All Luxury Candles
+              <ArrowRight className="ml-2 h-4 w-4 transition-transform group-hover:translate-x-1" />
+            </span>
+          </Button>
+          <Badge className="bg-accent/10 text-accent border border-accent/30 px-6 py-2 text-xs uppercase tracking-[0.26em]">
+            Free Shipping on Orders Over $75
           </Badge>
         </div>
       </div>

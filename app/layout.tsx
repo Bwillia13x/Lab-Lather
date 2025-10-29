@@ -15,20 +15,22 @@ const sourceSans3 = Source_Sans_3({
 })
 
 export const metadata: Metadata = {
-  title: "Lab & Lather - Modern Soaps & Candles",
+  title: "Lab & Lather - Luxury Scented Candles | High-Grade Perfumed Candles",
   description:
-    "Science-first, IFRA-compliant soaps and candles. Phthalate-free, sulfate-free. Design your modern ritual.",
+    "Discover premium, hand-poured luxury candles with complex perfume-grade fragrances. IFRA-certified, phthalate-free, 60+ hour burn time. Transform your space with high-grade scented candles.",
   generator: "v0.app",
   metadataBase: new URL("https://labandlather.com"),
   keywords: [
-    "artisan soaps",
     "luxury candles",
-    "IFRA compliant",
-    "phthalate-free",
-    "sulfate-free",
-    "modern skincare",
-    "subscription box",
-    "natural ingredients",
+    "scented candles",
+    "perfumed candles",
+    "high-grade candles",
+    "premium candles",
+    "hand-poured candles",
+    "IFRA certified candles",
+    "phthalate-free candles",
+    "soy candles",
+    "luxury home fragrance",
   ],
   authors: [{ name: "Lab & Lather" }],
   openGraph: {
@@ -36,15 +38,15 @@ export const metadata: Metadata = {
     locale: "en_US",
     url: "https://labandlather.com",
     siteName: "Lab & Lather",
-    title: "Lab & Lather - Modern Soaps & Candles",
+    title: "Lab & Lather - Luxury Scented Candles | High-Grade Perfumed Candles",
     description:
-      "Science-first, IFRA-compliant soaps and candles. Phthalate-free, sulfate-free. Design your modern ritual.",
+      "Premium hand-poured luxury candles with perfume-grade fragrances. IFRA-certified, phthalate-free, 60+ hour burn time. Elevate your space with our high-grade scented candles.",
     images: [
       {
         url: "/lab-lather-logo.jpg",
         width: 1200,
         height: 630,
-        alt: "Lab & Lather - Modern Soaps & Candles",
+        alt: "Lab & Lather - Luxury Scented Candles",
       },
     ],
   },
@@ -52,9 +54,9 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     site: "@labandlather",
     creator: "@labandlather",
-    title: "Lab & Lather - Modern Soaps & Candles",
+    title: "Lab & Lather - Luxury Scented Candles | High-Grade Perfumed Candles",
     description:
-      "Science-first, IFRA-compliant soaps and candles. Phthalate-free, sulfate-free. Design your modern ritual.",
+      "Premium hand-poured luxury candles with perfume-grade fragrances. IFRA-certified, phthalate-free, 60+ hour burn time.",
     images: ["/lab-lather-logo.jpg"],
   },
   robots: {
@@ -79,14 +81,10 @@ export default function RootLayout({
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Lab & Lather",
-    description: "Science-first, IFRA-compliant soaps and candles",
+    description: "Premium luxury scented candles with perfume-grade fragrances",
     url: "https://labandlather.com",
     logo: "https://labandlather.com/lab-lather-logo.jpg",
-    sameAs: [
-      "https://instagram.com/labandlather",
-      "https://x.com/labandlather",
-      "https://facebook.com/labandlather",
-    ],
+    sameAs: ["https://instagram.com/labandlather", "https://x.com/labandlather", "https://facebook.com/labandlather"],
     contactPoint: {
       "@type": "ContactPoint",
       email: "hello@labandlather.com",
@@ -103,10 +101,7 @@ export default function RootLayout({
   return (
     <html lang="en" className={`${spaceGrotesk.variable} ${sourceSans3.variable}`}>
       <head>
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
-        />
+        <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }} />
       </head>
       <body className="font-sans antialiased">
         {children}

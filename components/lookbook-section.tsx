@@ -7,22 +7,22 @@ import Link from "next/link"
 
 const lookbookShots = [
   {
-    title: "Clean Lab Ritual",
-    description: "Minimalist concrete surfaces with lab glass silhouettes and translucent soaps.",
+    title: "Minimalist Sanctuary",
+    description: "Clean lines and warm candlelight create a serene, modern atmosphere.",
     image: "/minimalist-lab-glassware-with-modern-soap-bars-and.jpg",
-    tag: "Concept styling",
+    tag: "Modern Living",
   },
   {
-    title: "Chromatic Amber",
-    description: "Warm lighting with smoked amber vessels staged for lobby installations.",
+    title: "Amber Glow",
+    description: "Rich amber tones and flickering flames for cozy, intimate evenings.",
     image: "/warm-amber-liquid-in-elegant-glass-containers--ric.jpg",
-    tag: "Hospitality rollout",
+    tag: "Evening Ambiance",
   },
   {
-    title: "Citrus Atelier",
-    description: "Vibrant botanicals and geometric forms ideal for retail feature walls.",
+    title: "Fresh & Bright",
+    description: "Energizing citrus scents paired with natural elements for daytime vitality.",
     image: "/fresh-citrus-fruits-and-essential-oils-in-minimal-.jpg",
-    tag: "Retail moment",
+    tag: "Morning Ritual",
   },
 ]
 
@@ -32,14 +32,14 @@ export function LookbookSection() {
       <div className="container mx-auto px-4">
         <div className="mx-auto mb-16 flex flex-col items-center text-center">
           <div className="mb-4 inline-flex items-center gap-2 rounded-full border border-accent/20 bg-accent/5 px-4 py-1.5 text-xs font-semibold uppercase tracking-[0.26em] text-accent">
-            Lookbook preview
+            Inspiration Gallery
           </div>
           <h2 className="mb-4 max-w-3xl text-balance text-3xl font-display font-bold tracking-tight md:text-4xl lg:text-5xl">
-            Gallery-grade visuals that sell the scent before it ships
+            Discover how our candles <span className="text-gradient-accent">transform spaces</span>
           </h2>
           <p className="max-w-2xl text-pretty text-lg text-muted-foreground">
-            Every Lab & Lather engagement includes pre-built creative assets—art direction, lighting notes, shelf concepts,
-            and copy that make your pitch deck read like a finished campaign.
+            From minimalist sanctuaries to cozy retreats, see how Lab & Lather candles create the perfect ambiance for
+            every moment. Let our curated gallery inspire your next purchase.
           </p>
         </div>
 
@@ -68,8 +68,8 @@ export function LookbookSection() {
                 <h3 className="text-xl font-display font-semibold text-foreground">{shot.title}</h3>
                 <p className="text-sm text-muted-foreground leading-relaxed">{shot.description}</p>
                 <div className="flex items-center justify-between text-xs uppercase tracking-[0.22em] text-muted-foreground">
-                  <span>Scene {index + 1}</span>
-                  <span>Lab & Lather Art Dept.</span>
+                  <span>Style {index + 1}</span>
+                  <span>Lab & Lather</span>
                 </div>
               </div>
             </div>
@@ -78,15 +78,16 @@ export function LookbookSection() {
 
         <div className="mt-14 flex flex-col items-center gap-4 text-center">
           <p className="text-sm text-muted-foreground max-w-xl">
-            Request the interactive lookbook to access scene breakdowns, prop sourcing lists, and CAD-ready packaging dielines.
+            Ready to create your own sanctuary? Explore our full collection of luxury scented candles and find your
+            perfect match.
           </p>
           <Button
             asChild
             size="lg"
-            className="group bg-background/80 text-foreground border border-accent/40 hover:border-accent/60 hover:bg-background"
+            className="group bg-gradient-to-r from-accent to-accent/80 shadow-lg shadow-accent/30 hover:from-accent/90 hover:to-accent/70"
           >
             <Link href="#subscribe" className="inline-flex items-center">
-              Unlock the full lookbook
+              Shop Our Collection
             </Link>
           </Button>
         </div>
