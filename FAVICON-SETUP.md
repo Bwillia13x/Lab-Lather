@@ -28,13 +28,13 @@ The favicon placeholder file exists but needs to be replaced with actual icons.
 
 ### Option 3: Using CLI Tools
 
-```bash
+\`\`\`bash
 # Install ImageMagick if needed
 brew install imagemagick
 
 # Convert logo to favicon
 convert public/lab-lather-logo.jpg -resize 32x32 public/favicon.ico
-```
+\`\`\`
 
 ## After Generation
 
