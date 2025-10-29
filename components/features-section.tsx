@@ -13,28 +13,28 @@ const features = [
     title: "Perfume-Grade Fragrances",
     description:
       "Complex scent profiles with top, heart, and base notes that evolve beautifully as your candle burns, creating an immersive sensory experience.",
-    image: "/elegant-essential-oil-bottles-arranged-geometrical.jpg",
+    image: "/premium-fragrance-oils-luxury-candle-ingredients.jpg",
   },
   {
     icon: Shield,
     title: "Clean & Safe Ingredients",
     description:
       "IFRA-certified formulations that are phthalate-free, paraben-free, and cruelty-free. Premium soy-coconut wax blend for a clean, even burn.",
-    image: "/natural-organic-ingredients-in-glass-containers--c.jpg",
+    image: "/natural-soy-coconut-wax-luxury-candle-making.jpg",
   },
   {
     icon: Clock,
     title: "Extended Burn Time",
     description:
       "Each luxury candle provides 60+ hours of exceptional fragrance throw, filling your entire space with sophisticated scent from first light to last.",
-    image: "/laboratory-beakers-and-test-tubes-with-clear-liqui.jpg",
+    image: "/luxury-candle-burning-long-lasting-scent.jpg",
   },
   {
     icon: Leaf,
     title: "Sustainable Luxury",
     description:
       "Refillable vessels, recycled glass containers, and FSC-certified packaging ensure your indulgence is as kind to the planet as it is to your senses.",
-    image: "/sustainable-eco-friendly-packaging-with-natural-el.jpg",
+    image: "/sustainable-luxury-candle-packaging-eco-friendly.jpg",
   },
 ]
 

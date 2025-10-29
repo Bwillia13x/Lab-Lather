@@ -15,31 +15,31 @@ const scentFamilies = [
     id: "citrus",
     label: "Fresh Citrus",
     description: "Bright, energizing, clean",
-    image: "/fresh-citrus-fruits-and-essential-oils-in-minimal-.jpg",
+    image: "/luxury-citrus-scented-candle-bright-fresh.jpg",
   },
   {
     id: "floral",
     label: "Modern Floral",
     description: "Delicate, sophisticated, airy",
-    image: "/delicate-white-flowers-in-modern-glass-vase--minim.jpg",
+    image: "/luxury-white-floral-candle-elegant-jasmine.jpg",
   },
   {
     id: "woody",
     label: "Warm Woods",
     description: "Grounding, rich, comforting",
-    image: "/natural-wood-elements-and-warm-amber-tones--minima.jpg",
+    image: "/luxury-warm-wood-candle-cedarwood-amber.jpg",
   },
   {
     id: "herbal",
     label: "Herbal Green",
     description: "Crisp, natural, refreshing",
-    image: "/fresh-green-herbs-in-laboratory-beakers--clean-sci.jpg",
+    image: "/luxury-fresh-herb-candle-eucalyptus-mint.jpg",
   },
   {
     id: "amber",
     label: "Amber & Spice",
     description: "Deep, warm, inviting",
-    image: "/warm-amber-liquid-in-elegant-glass-containers--ric.jpg",
+    image: "/luxury-spiced-vanilla-candle-warm-cozy.jpg",
   },
 ]
 

@@ -106,7 +106,7 @@ export function HeroSection() {
               <div className="group relative rounded-xl border border-accent/20 bg-card/80 p-4 shadow-[0_40px_80px_-40px_rgba(48,93,235,0.4)] backdrop-blur">
                 <div className="relative overflow-hidden rounded-lg">
                   <Image
-                    src="/minimalist-lab-glassware-with-modern-soap-bars-and.jpg"
+                    src="/luxury-scented-candles-in-elegant-modern-interior.jpg"
                     alt="Lab & Lather luxury scented candles"
                     width={900}
                     height={900}

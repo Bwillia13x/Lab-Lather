@@ -11,7 +11,7 @@ const caseStudies = [
   {
     client: "Modern Home Makeover",
     sector: "Home Transformation",
-    image: "/natural-wood-elements-and-warm-amber-tones--minima.jpg",
+    image: "/luxury-midnight-amber-candle-bestseller.jpg",
     outcome: "Complete ambiance transformation",
     summary:
       "Sarah transformed her entire home with our Warm Woods collection. The rich, grounding scents created a cohesive atmosphere throughout her space, making every room feel like a luxury retreat.",
@@ -21,7 +21,7 @@ const caseStudies = [
   {
     client: "Wellness Sanctuary",
     sector: "Self-care ritual",
-    image: "/warm-amber-liquid-in-elegant-glass-containers--ric.jpg",
+    image: "/luxury-holiday-candle-collection-seasonal.jpg",
     outcome: "Enhanced daily wellness routine",
     summary:
       "Marcus created his perfect evening wind-down ritual with our Amber & Spice candles. The warm, inviting scents helped him disconnect from work stress and embrace relaxation every night.",
@@ -31,7 +31,7 @@ const caseStudies = [
   {
     client: "Fresh Start Collection",
     sector: "New home essentials",
-    image: "/fresh-citrus-fruits-and-essential-oils-in-minimal-.jpg",
+    image: "/luxury-coastal-candle-collection-ocean-breeze.jpg",
     outcome: "Perfect housewarming gift",
     summary:
       "Elena gifted our Fresh Citrus collection to her best friend's new apartment. The bright, energizing scents made the space feel instantly welcoming and became a conversation starter at every gathering.",

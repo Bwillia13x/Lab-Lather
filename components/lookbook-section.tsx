@@ -9,19 +9,19 @@ const lookbookShots = [
   {
     title: "Minimalist Sanctuary",
     description: "Clean lines and warm candlelight create a serene, modern atmosphere.",
-    image: "/minimalist-lab-glassware-with-modern-soap-bars-and.jpg",
+    image: "/luxury-candle-signature-collection-display.jpg",
     tag: "Modern Living",
   },
   {
     title: "Amber Glow",
     description: "Rich amber tones and flickering flames for cozy, intimate evenings.",
-    image: "/warm-amber-liquid-in-elegant-glass-containers--ric.jpg",
+    image: "/luxury-candles-ambient-glow-atmosphere.jpg",
     tag: "Evening Ambiance",
   },
   {
     title: "Fresh & Bright",
     description: "Energizing citrus scents paired with natural elements for daytime vitality.",
-    image: "/fresh-citrus-fruits-and-essential-oils-in-minimal-.jpg",
+    image: "/artisan-hand-poured-luxury-candles-crafting.jpg",
     tag: "Morning Ritual",
   },
 ]

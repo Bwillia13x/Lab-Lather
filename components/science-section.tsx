@@ -122,7 +122,7 @@ export function ScienceSection() {
               <CardContent className="p-0">
                 <div className="aspect-[4/3] relative overflow-hidden">
                   <Image
-                    src="/laboratory-beakers-and-test-tubes-with-clear-liqui.jpg"
+                    src="/luxury-candle-craftsmanship-artisan-process.jpg"
                     alt="Premium candle craftsmanship - hand-poured luxury scented candles"
                     fill
                     className="object-cover transition-transform duration-700 group-hover:scale-105"
