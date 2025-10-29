@@ -131,7 +131,7 @@ export function FeaturesSection() {
           ))}
         </div>
         <div className="mt-16 grid gap-6 lg:grid-cols-2">
-          {process.map((step, index) => {
+          {process.map((step) => {
             const Icon = step.icon
             return (
               <div
